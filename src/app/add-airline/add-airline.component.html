@@ -1,0 +1,40 @@
+<div class="col-md-6 offset-md-3">
+  <br />
+  <h3>Create Airline</h3>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Airline Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="airlineName"
+        name="airlineName"
+        [(ngModel)]="airline.airlineName"
+      />
+    </div>
+    <div class="form-group">
+      <label>Airline Contact</label>
+      <input
+        type="text"
+        class="form-control"
+        id="airlineContactNumber"
+        name="airlineContactNumber"
+        [(ngModel)]="airline.airlineContactNumber"
+      />
+    </div>
+    <div class="form-group">
+      <label>Airline Address</label>
+      <input
+        type="text"
+        class="form-control"
+        id="airlineAddress"
+        name="airlineAddress"
+        [(ngModel)]="airline.airlineAddress"
+      />
+    </div>
+    <br />
+    <div class="form-group">
+      <button class="btn btn-success" type="=submit">Add Airline</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,39 @@
+<h2>Airline List</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <!-- <th>Airline Id</th> -->
+      <th>Airline Name</th>
+      <th>Airline Contact Details</th>
+      <th>Airline Address</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let airline of airlines">
+      <!-- <td>{{airline.airlineId}}</td> -->
+      <td>{{ airline.airlineName }}</td>
+      <td>{{ airline.airlineContactNumber }}</td>
+      <td>{{ airline.airlineAddress }}</td>
+      <td>
+        <button (click)="updateAirline(airline.airlineId)" class="btn btn-info">
+          Update
+        </button>
+        <button
+          (click)="deleteAirline(airline.airlineId)"
+          class="btn btn-danger"
+          style="margin-left: 10px"
+        >
+          Delete
+        </button>
+        <button
+          (click)="viewAirline(airline.airlineId)"
+          class="btn btn-info"
+          style="margin-left: 10px"
+        >
+          View
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
