@@ -1,0 +1,20 @@
+<div class="col-md-6 offset-md-3">
+  <br />
+  <h3>Update Flight</h3>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Flight Capacity</label>
+      <input
+        type="text"
+        class="form-control"
+        id="flightCapacity"
+        name="flightCapacity"
+        [(ngModel)]="flight.flightCapacity"
+      />
+    </div>
+    <br />
+    <div class="form-group">
+      <button class="btn btn-success" type="=submit">Update</button>
+    </div>
+  </form>
+</div>

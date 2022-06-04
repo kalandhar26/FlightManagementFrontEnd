@@ -1,0 +1,102 @@
+<div class="col-md-6 offset-md-3">
+  <br />
+  <h3>Add Schedules</h3>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Source</label>
+      <input
+        type="text"
+        class="form-control"
+        id="sourceLocation"
+        name="sourceLocation"
+        [(ngModel)]="schedule.sourceLocation"
+      />
+    </div>
+    <div class="form-group">
+      <label>Destination</label>
+      <input
+        type="text"
+        class="form-control"
+        id="destinationLocation"
+        name="destinationLocation"
+        [(ngModel)]="schedule.destinationLocation"
+      />
+    </div>
+    <div>
+      <label>Departure Date</label>
+      <input
+        type="date"
+        class="form-control"
+        id="departureDateTime"
+        name="departureDateTime"
+        [(ngModel)]="schedule.departureDateTime"
+      />
+    </div>
+    <div>
+      <label>Arrival Date</label>
+      <input
+        type="date"
+        class="form-control"
+        id="arrivalDateTime"
+        name="arrivalDateTime"
+        [(ngModel)]="schedule.arrivalDateTime"
+      />
+    </div>
+    <div>
+      <label>Ticket Fare</label>
+      <input
+        type="number"
+        class="form-control"
+        id="ticketPrice"
+        name="ticketPrice"
+        [(ngModel)]="schedule.ticketPrice"
+      />
+    </div>
+    <div>
+      <label>Seats Available</label>
+      <input
+        type="number"
+        class="form-control"
+        id="availableSeats"
+        name="availableSeats"
+        [(ngModel)]="schedule.availableSeats"
+      />
+    </div>
+    <div>
+      <label>Schedule Status</label>
+      <input
+        type="text"
+        class="form-control"
+        id="status"
+        name="status"
+        [(ngModel)]="schedule.status"
+      />
+    </div>
+    <div>
+      <label>Flight Number</label>
+      <input
+        type="number"
+        class="form-control"
+        id="flightNumber"
+        name="flightNumber"
+        [(ngModel)]="schedule.flightNumber"
+      />
+    </div>
+    <div>
+      <label>Airline Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="airlineName"
+        name="airlineName"
+        [(ngModel)]="schedule.airlineName"
+      />
+    </div>
+    <br />
+    <div class="form-group">
+      <button class="btn btn-success" type="=submit">Add Flight</button>
+    </div>
+    <br />
+  </form>
+  <br />
+</div>

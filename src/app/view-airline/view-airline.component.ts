@@ -4,11 +4,11 @@ import { Airline } from '../Entities/airline';
 import { AirlineService } from '../Services/airline.service';
 
 @Component({
-  selector: 'app-search-airline',
-  templateUrl: './search-airline.component.html',
-  styleUrls: ['./search-airline.component.css']
+  selector: 'app-view-airline',
+  templateUrl: './view-airline.component.html',
+  styleUrls: ['./view-airline.component.css']
 })
-export class SearchAirlineComponent implements OnInit {
+export class ViewAirlineComponent implements OnInit {
 
   id: number;
   airline: Airline;

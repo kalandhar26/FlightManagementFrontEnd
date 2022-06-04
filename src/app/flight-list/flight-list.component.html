@@ -1,0 +1,45 @@
+<h2>flight List</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <!-- <th>Airline Id</th> -->
+      <th>Flight Number</th>
+      <th>Flight Capacity</th>
+      <th>Airline Name</th>
+      <th>Airline Contact Details</th>
+      <th>Airline Address</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let flight of flights">
+      <td>{{ flight.flightNumber }}</td>
+      <td>{{ flight.flightCapacity }}</td>
+      <td>{{ flight.airlineName }}</td>
+      <td>{{ flight.airlineContactNumber }}</td>
+      <td>{{ flight.airlineAddress }}</td>
+      <td>
+        <button
+          (click)="updateFlight(flight.flightNumber)"
+          class="btn btn-info"
+        >
+          Update
+        </button>
+        <button
+          (click)="deleteFlight(flight.flightNumber)"
+          class="btn btn-danger"
+          style="margin-left: 10px"
+        >
+          Delete
+        </button>
+        <button
+          (click)="viewFlight(flight.flightNumber)"
+          class="btn btn-info"
+          style="margin-left: 10px"
+        >
+          View
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -28,9 +28,9 @@ export class UpdateAirlineComponent implements OnInit {
   onSubmit() {
     this.airlineService.updateAirline(this.airline, this.id).subscribe(
       data => {
+        console.log(this.airline);
         this.goToAirlines();
-      }, error => console.log(error)
-    )
+      }, error => console.log(error));
   }
 
   goToAirlines() {

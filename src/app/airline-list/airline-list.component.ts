@@ -11,7 +11,7 @@ import { AirlineService } from '../Services/airline.service';
 export class AirlineListComponent implements OnInit {
 
   airlines: Airline[];
-  constructor(private airlineSevice: AirlineService,
+  constructor(private airlineService: AirlineService,
     private router: Router) { }
 
   ngOnInit(): void {
@@ -19,7 +19,7 @@ export class AirlineListComponent implements OnInit {
   }
 
   private getAirlines() {
-    this.airlineSevice.getAllAirlines().subscribe(data => {
+    this.airlineService.getAllAirlines().subscribe(data => {
       this.airlines = data;
     }
     );
@@ -30,7 +30,7 @@ export class AirlineListComponent implements OnInit {
   }
 
   deleteAirline(id: number) {
-    this.airlineSevice.deleteAirlineById(id).subscribe(data => {
+    this.airlineService.deleteAirlineById(id).subscribe(data => {
       console.log(data);
       this.getAirlines();
     }, error => { console.log(error) });
