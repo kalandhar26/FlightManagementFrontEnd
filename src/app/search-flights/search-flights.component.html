@@ -1,0 +1,65 @@
+<div class="col-md-6 offset-md-3 mt">
+  <form class="d-flex" (ngSubmit)="onSubmit()">
+    <input
+      required
+      class="form-control me-2"
+      type="search"
+      placeholder="source"
+      aria-label="sourceLocation"
+      id="Source"
+      name="Source"
+      [(ngModel)]="searchCriteria.sourceLocation"
+    />
+    <input
+      required
+      class="form-control me-2"
+      type="search"
+      placeholder="destination"
+      aria-label="destinationLocation"
+      id="Destination"
+      name="Destination"
+      [(ngModel)]="searchCriteria.destinationLocation"
+    />
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>
+</div>
+<div *ngIf="schedules && schedules.length > 0">
+  <table class="table table-striped mt">
+    <thead>
+      <tr>
+        <!-- <th>Airline Id</th> -->
+        <th>Source</th>
+        <th>Destination</th>
+        <th>Departure</th>
+        <th>Arrival</th>
+        <th>Price</th>
+        <th>Seats Avail</th>
+        <th>Status</th>
+        <th>Flight Number</th>
+        <th>Airline Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let schedule of schedules">
+        <td>{{ schedule.sourceLocation }}</td>
+        <td>{{ schedule.destinationLocation }}</td>
+        <td>{{ schedule.departureDateTime }}</td>
+        <td>{{ schedule.arrivalDateTime }}</td>
+        <td>{{ schedule.ticketPrice }}</td>
+        <td>{{ schedule.availableSeats }}</td>
+        <td>{{ schedule.status }}</td>
+        <td>{{ schedule.flightNumber }}</td>
+        <td>{{ schedule.airlineName }}</td>
+        <td>
+          <button
+            class="btn btn-info"
+            (click)="viewSchedule(schedule.scheduleId)"
+          >
+            Book Tickets
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

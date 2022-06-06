@@ -32,8 +32,4 @@ export class ScheduleService {
     return this.httpClient.delete(`${this.baseURL}/${id}`);
   }
 
-  getScheduleBySource(source: string): Observable<any> {
-    return this.httpClient.get(`${this.baseURL}/source/${source}`);
-  }
-
 }

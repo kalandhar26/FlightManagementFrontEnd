@@ -22,3 +22,123 @@
     <label><b>Airline Name: </b></label>{{ schedule.airlineName }}
   </div>
 </div>
+<hr />
+
+<!-- Form To Add Booking Details -->
+
+<form *ngIf="">
+  <div class="col-md-6 offset-md-3">
+    <div class="form-group">
+      <label>Email</label>
+      <input
+        type="text"
+        class="form-control"
+        id="Email"
+        name="Email"
+        [(ngModel)]="passenger.email"
+      />
+    </div>
+    <div class="form-group">
+      <label>Passenger Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="passengerName"
+        name="passengerName"
+        [(ngModel)]="passenger.passengerName"
+      />
+    </div>
+    <div class="form-group">
+      <label>Passenger Gender</label>
+      <select
+        type="text"
+        class="form-control"
+        id="passengerGender"
+        name="passengerGender"
+        [(ngModel)]="passenger.passengerGender"
+      >
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+    </div>
+    <br />
+    <div class="form-group">
+      <label>Passenger Age</label>
+      <input
+        type="number"
+        class="form-control"
+        id="passengerAge"
+        name="passengerAge"
+        [(ngModel)]="passenger.passengerAge"
+      />
+    </div>
+    <div class="form-group">
+      <label>Seat Number</label>
+      <input
+        type="number"
+        class="form-control"
+        id="seatNumber"
+        name="seatNumber"
+        [(ngModel)]="passenger.passengerAge"
+      />
+    </div>
+    <div class="form-group">
+      <label>Meals</label>
+      <select
+        type="text"
+        class="form-control"
+        id="Meals"
+        name="Meals"
+        [(ngModel)]="passenger.optforMeals"
+      >
+        <option value="true">true</option>
+        <option value="false">false</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Meal Type</label>
+      <select
+        type="text"
+        class="form-control"
+        id="MealType"
+        name="MealType"
+        [(ngModel)]="passenger.mealType"
+      >
+        <option value="Veg">Veg</option>
+        <option value="NonVeg">Non-Veg</option>
+      </select>
+    </div>
+    <button class="btn btn-success mt" type="submit">Add</button>
+  </div>
+</form>
+<!-- Table to save Passenger Data -->
+
+<table *ngIf="" class="table table-striped">
+  <thead>
+    <tr>
+      <th>passengerName</th>
+      <th>passengerGender</th>
+      <th>passengerAge</th>
+      <th>seatNumber</th>
+      <th>optforMeals</th>
+      <th>mealType</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let passenger of passengers">
+      <td>{{ passenger.passengerName }}</td>
+      <td>{{ passenger.passengerGender }}</td>
+      <td>{{ passenger.passengerAge }}</td>
+      <td>{{ passenger.seatNumber }}</td>
+      <td>{{ passenger.optforMeals }}</td>
+      <td>{{ passenger.mealType }}</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Book Tickets Button to post Data to backend server -->
+<div *ngIf="" class="text-center">
+  <button type="button" class="btn btn-primary btn-lg">Book Tickets</button>
+</div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Passenger } from '../Entities/passenger';
 import { Schedule } from '../Entities/schedule';
 import { ScheduleService } from '../Services/schedule.service';
 
@@ -12,6 +13,9 @@ export class ViewScheduleComponent implements OnInit {
 
   id: number;
   schedule: Schedule;
+  passenger: Passenger = new Passenger();
+  passengers: Passenger[];
+
   constructor(private route: ActivatedRoute,
     private scheduleService: ScheduleService) { }
 

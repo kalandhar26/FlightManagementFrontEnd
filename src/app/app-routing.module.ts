@@ -8,6 +8,7 @@ import { FlightListComponent } from './flight-list/flight-list.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ScheduleListComponent } from './schedule-list/schedule-list.component';
+import { SearchFlightsComponent } from './search-flights/search-flights.component';
 import { AuthGuard } from './Services/auth.guard';
 import { UpdateAirlineComponent } from './update-airline/update-airline.component';
 import { UpdateFlightComponent } from './update-flight/update-flight.component';
@@ -31,7 +32,8 @@ const routes: Routes = [
   { path: "update-schedule/:id", component: UpdateScheduleComponent, canActivate: [AuthGuard] },
   { path: "view-schedule/:id", component: ViewScheduleComponent, canActivate: [AuthGuard] },
   { path: "login", component: LoginPageComponent },
-  { path: "adminhome", component: NavBarComponent, canActivate: [AuthGuard] }
+  { path: "adminhome", component: NavBarComponent, canActivate: [AuthGuard] },
+  { path: "search-flights", component: SearchFlightsComponent }
 ];
 
 @NgModule({

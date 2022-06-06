@@ -11,8 +11,4 @@ export class Schedule {
     flightNumber: number;
     flightCapacity: number;
     airlineName: number;
-
-
-
-
 }

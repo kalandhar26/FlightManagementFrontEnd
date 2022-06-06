@@ -26,6 +26,7 @@ import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { LoginNavbarComponent } from './login-navbar/login-navbar.component';
+import { SearchFlightsComponent } from './search-flights/search-flights.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { LoginNavbarComponent } from './login-navbar/login-navbar.component';
     NavBarComponent,
     FooterComponent,
     LoginPageComponent,
-    LoginNavbarComponent
+    LoginNavbarComponent,
+    SearchFlightsComponent
   ],
   imports: [
     BrowserModule,
