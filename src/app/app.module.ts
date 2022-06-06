@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatButtonModule } from '@angular/material/button'
+import { MatToolbarModule } from '@angular/material/toolbar'
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatInputModule } from '@angular/material/input'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +21,11 @@ import { AddScheduleComponent } from './add-schedule/add-schedule.component';
 import { ScheduleListComponent } from './schedule-list/schedule-list.component';
 import { UpdateScheduleComponent } from './update-schedule/update-schedule.component';
 import { ViewScheduleComponent } from './view-schedule/view-schedule.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { FooterComponent } from './footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { LoginNavbarComponent } from './login-navbar/login-navbar.component';
 
 @NgModule({
   declarations: [
@@ -32,13 +41,23 @@ import { ViewScheduleComponent } from './view-schedule/view-schedule.component';
     AddScheduleComponent,
     ScheduleListComponent,
     UpdateScheduleComponent,
-    ViewScheduleComponent
+    ViewScheduleComponent,
+    NavBarComponent,
+    FooterComponent,
+    LoginPageComponent,
+    LoginNavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatFormFieldModule,
+    MatInputModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,51 @@
+<div class="bootstrap-wrapper mt">
+  <div class="container text-center">
+    <div class="cobtainer">
+      <div class="row">
+        <div class="col-md-5 offset-md-3">
+          <h1 class="text-center">Enter Username and Password</h1>
+          <form (ngSubmit)="onSubmit()">
+            <mat-form-field class="full-width">
+              <mat-label> Username </mat-label>
+              <input
+                [(ngModel)]="credentials.userName"
+                name="username"
+                required
+                type="text"
+                matInput
+              />
+            </mat-form-field>
+            <mat-form-field class="full-width">
+              <mat-label> Password </mat-label>
+              <input
+                [(ngModel)]="credentials.password"
+                name="password"
+                required
+                type="password"
+                matInput
+              />
+            </mat-form-field>
+            <div class="container" text-center>
+              <button
+                type="submit"
+                mat-raised-button
+                color="primary"
+                routerLink="/airlines"
+              >
+                Login
+              </button>
+              <button
+                style="margin-left: 10px"
+                type="reset"
+                mat-raised-button
+                color="accent"
+              >
+                Reset
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
